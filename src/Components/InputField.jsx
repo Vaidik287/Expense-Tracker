@@ -1,11 +1,16 @@
-import { useState } from "react";
 import { LuDelete } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
-const InputField = () => {
-  const [moneyValue, setMoneyValue] = useState("");
-
+const InputField = ({
+  moneyValue,
+  setNote,
+  setMoneyValue,
+  setDate,
+  handleSubmit,
+  getToday,
+}) => {
   return (
-    <div className="grid grid-rows-2 col-auto gap-2 w-[20vw] p-2 bg-gray-200">
+    <div className="grid grid-rows-2 col-auto gap-2 w-[20vw] p-2 rounded-xl bg-gray-200">
       <input
         type="text"
         inputMode="numeric"
@@ -16,6 +21,7 @@ const InputField = () => {
       <input
         type="text"
         placeholder="Enter A Note..."
+        onChange={(e) => setNote(e.target.value)}
         className="p-3 border rounded-lg bg-white focus:outline-none border-none"
       />
       <div className="grid grid-rows-4 grid-cols-4 gap-1 font-normal text-black">
@@ -37,7 +43,10 @@ const InputField = () => {
         >
           9
         </div>
-        <div className="flex justify-center items-center justify-items-center bg-white border-none text-xs rounded-xs hover:cursor-pointer active:bg-gray-100">
+        <div
+          className="flex justify-center items-center justify-items-center bg-white border-none text-xs rounded-xs hover:cursor-pointer active:bg-gray-100"
+          onClick={() => setDate(getToday())}
+        >
           Today
         </div>
         <div
@@ -108,12 +117,13 @@ const InputField = () => {
         >
           <LuDelete />
         </div>
-        <div
+        <Link
+          to="/"
           className="flex justify-center bg-gray-400 border-none text-xl rounded-xs hover:cursor-pointer active:bg-gray-100"
-          onClick={() => setMoneyValue(eval(moneyValue))}
+          onClick={handleSubmit}
         >
           ✓
-        </div>
+        </Link>
       </div>
     </div>
   );

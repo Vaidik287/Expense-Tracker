@@ -20,14 +20,20 @@ import {
 import { RxScissors } from "react-icons/rx";
 import { TbMoodKid } from "react-icons/tb";
 
-const Expense = ({ setShowInputField }) => {
+const Expense = ({ setShowInputField, setCategory }) => {
+  
+
   return (
     <>
       <div className="grid grid-cols-4 row-auto gap-1 text-xs font-medium justify-items-center p-2">
         <div className="flex items-center justify-items-center flex-col">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Shopping");
+            console.log("clicked");
+          }}
           >
             <GiShoppingCart className="h-5 w-5 text-gray-600" />
           </div>
@@ -35,8 +41,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Food");
+          }}
           >
             <PiForkKnife className="h-5 w-5 text-gray-600" />
           </div>
@@ -44,8 +53,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Phone");
+          }}
           >
             <IoPhonePortraitOutline className="h-5 w-5 text-gray-600" />
           </div>
@@ -53,8 +65,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Entertainment");
+          }}
           >
             <IoGameControllerOutline className="h-5 w-5 text-gray-600" />
           </div>
@@ -62,8 +77,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Education");
+          }}
           >
             <GiGraduateCap className="h-5 w-5 text-gray-600" />
           </div>
@@ -71,8 +89,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Beauty");
+          }}
           >
             <RxScissors className="h-5 w-5 text-gray-600" />
           </div>
@@ -80,8 +101,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Sports");
+          }}
           >
             <PiPersonSimpleRunLight className="h-5 w-5 text-gray-600" />
           </div>
@@ -89,8 +113,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Social");
+          }}
           >
             <IoPeopleSharp className="h-5 w-5 text-gray-600" />
           </div>
@@ -98,8 +125,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Transportation");
+          }}
           >
             <BiSolidBus className="h-5 w-5 text-gray-600" />
           </div>
@@ -107,8 +137,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Clothing");
+          }}
           >
             <PiTShirtLight className="h-5 w-5 text-gray-600" />
           </div>
@@ -116,8 +149,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Car");
+          }}
           >
             <IoCarSportOutline className="h-5 w-5 text-gray-600" />
           </div>
@@ -125,8 +161,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Electronics");
+          }}
           >
             <FaTv className="h-5 w-5 text-gray-600" />
           </div>
@@ -134,8 +173,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Travel");
+          }}
           >
             <FaPlane className="h-5 w-5 text-gray-600" />
           </div>
@@ -143,8 +185,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Health");
+          }}
           >
             <FaHeartbeat className="h-5 w-5 text-gray-600" />
           </div>
@@ -152,8 +197,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Pets");
+          }}
           >
             <LuDog className="h-5 w-5 text-gray-600" />
           </div>
@@ -161,8 +209,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Repairs");
+          }}
           >
             <GoTools className="h-5 w-5 text-gray-600" />
           </div>
@@ -170,8 +221,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Housing");
+          }}
           >
             <LuHouse className="h-5 w-5 text-gray-600" />
           </div>
@@ -179,8 +233,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Home");
+          }}
           >
             <LuSofa className="h-5 w-5 text-gray-600" />
           </div>
@@ -188,8 +245,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Gifts");
+          }}
           >
             <FiGift className="h-5 w-5 text-gray-600" />
           </div>
@@ -197,8 +257,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Donations");
+          }}
           >
             <BiDonateHeart className="h-5 w-5 text-gray-600" />
           </div>
@@ -206,8 +269,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Lottery");
+          }}
           >
             <LuDice5 className="h-5 w-5 text-gray-600" />
           </div>
@@ -215,8 +281,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Snacks");
+          }}
           >
             <PiPopcorn className="h-5 w-5 text-gray-600" />
           </div>
@@ -224,8 +293,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Kids");
+          }}
           >
             <TbMoodKid className="h-5 w-5 text-gray-600" />
           </div>
@@ -233,8 +305,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Vegetables");
+          }}
           >
             <LuCarrot className="h-5 w-5 text-gray-600" />
           </div>
@@ -242,8 +317,11 @@ const Expense = ({ setShowInputField }) => {
         </div>
         <div className="flex items-center justify-items-center flex-col ">
           <div
-            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-yellow-300"
-            onClick={() => setShowInputField((prev) => !prev)}
+            className="w-8 h-8 rounded-full border-none bg-gray-200 grid place-content-center hover:cursor-pointer active:bg-indigo-300"
+            onClick={() => {
+            setShowInputField((prev) => !prev);
+            setCategory("Fruits");
+          }}
           >
             <PiCherries className="h-5 w-5 text-gray-600" />
           </div>

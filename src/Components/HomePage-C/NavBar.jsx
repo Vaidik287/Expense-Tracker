@@ -1,18 +1,42 @@
 import { useState } from "react";
 import { IoMdCalendar } from "react-icons/io";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import CalendarDateComponent from "../DatePicker";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
 
+  const { id } = useParams();
+  const data = useSelector((state) => state.itemData.items);
+
+  const item = data.find((item) => item.id === Number(id));
+
+  const expenses = data.filter((item) => item.type === "Expense");
+  const reduceExpenses = expenses.reduce(
+    (total, item) => total + Number(item.amount),
+    0,
+  );
+
+  const income = data.filter((item) => item.type === "Income");
+  const reduceIncome = income.reduce(
+    (total, item) => total + Number(item.amount),
+    0,
+  );
+
+  const realExpenses = Number(reduceExpenses);
+  const realIncome = Number(reduceIncome);
+
+  const balance = realIncome - realExpenses;
+  const realbalance = Number(balance);
+
   return (
     <>
-      <div className=" bg-amber-300 text-2xl grid grid-cols-5 row-auto p-2">
+      <div className=" bg-indigo-400 text-2xl grid grid-cols-5 row-auto p-2">
         <div className="font-bold col-span-4 text-center">Money Tracker</div>
         <IoMdCalendar
-          className="hover:cursor-pointer p-1 size-max col-start-6 rounded-2xl border-amber-300 active:bg-amber-500"
+          className="hover:cursor-pointer p-1 size-max col-start-6 rounded-2xl bg-indigo-300 active:bg-indigo-500"
           onClick={() => setShowCalendar((prev) => !prev)}
         />
         {showCalendar && (
@@ -41,15 +65,15 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className="bg-amber-300 grid grid-cols-4 row-auto pr-2 pl-2 text-center">
+      <div className="bg-indigo-400 grid grid-cols-4 row-auto pr-2 pl-2 text-center font-medium">
         <div>2026</div>
         <div>Expenses</div>
         <div>Income</div>
         <div>Balance</div>
         <div>June</div>
-        <div>12,000</div>
-        <div>0</div>
-        <div>-12,000</div>
+        <div>{realExpenses}</div>
+        <div>{realIncome}</div>
+        <div>{realbalance}</div>
       </div>
     </>
   );
