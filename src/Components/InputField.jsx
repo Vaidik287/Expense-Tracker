@@ -10,7 +10,7 @@ const InputField = ({
   getToday,
 }) => {
   return (
-    <div className="grid grid-rows-2 col-auto gap-2 w-[20vw] p-2 rounded-xl bg-gray-200">
+    <div className="grid grid-rows-2 grid-cols-1 gap-2 w-full max-w-sm sm:max-w-md p-2 rounded-xl bg-gray-200">
       <input
         type="text"
         inputMode="numeric"

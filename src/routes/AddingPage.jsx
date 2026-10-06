@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NavBar2 from "../Components/AddingPage-C/Navbar-2";
 import Expense from "../Components/AddingPage-C/Expense";
 import Income from "../Components/AddingPage-C/Income";
 import InputField from "../Components/InputField";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { itemDataActions } from "../store/itemDataSlice";
 
 const AddingPage = () => {
@@ -63,7 +63,7 @@ const AddingPage = () => {
             onClick={() => setShowInputField(false)}
           >
             <div
-              className=" shadow-2xl z-50 "
+              className="bg-gray-200 rounded-xl shadow-2xl z-50 "
               onClick={(e) => e.stopPropagation()}
             >
               <InputField

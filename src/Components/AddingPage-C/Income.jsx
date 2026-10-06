@@ -3,11 +3,8 @@ import { LuChartLine } from "react-icons/lu";
 import { MdWorkOutline } from "react-icons/md";
 import { PiCoinsLight } from "react-icons/pi";
 import { RiHandCoinLine } from "react-icons/ri";
-import { useSelector } from "react-redux";
 
 const Income = ({ setShowInputField, setCategory }) => {
-  const data = useSelector((state) => state.itemData.items);
-
   return (
     <div className="grid grid-cols-4 row-auto text-xs font-medium p-2 gap-1">
       <div className="flex items-center justify-items-center flex-col">
